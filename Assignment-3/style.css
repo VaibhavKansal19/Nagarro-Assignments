@@ -1,0 +1,36 @@
+body{
+    background-image: linear-gradient(to bottom right, #bde0fe, #a2d2ff);
+}
+
+div{
+    background-color: #06d6a0;
+    padding: 30px 40px;
+    color: white;
+    text-align: center;
+}
+
+h1{
+    font-size: 50px;
+}
+
+input{
+    font-size: 20px;
+    width: 60%;
+    height: 30px;
+}
+
+button{
+    font-size: 20px;
+    width: 10%;
+    height: 30px;
+}
+
+ul li{
+    font-size: 25px;
+    padding: 5px 20px;
+    border-radius: 10px;
+}
+
+ul li:nth-child(odd){
+    background: #d0f3e9;
+}
