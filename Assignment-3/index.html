@@ -9,14 +9,16 @@
 </head>
 <body>
 
-    <div>
-        <h1>To-Do List</h1>
-        <input type="text" id="item" placeholder="Add a task....">
-        <button onclick="addItem()">Add</button>
-        <button onclick="removeItem()">Remove</button>
+    <div id="head">
+        <h1>To-Do List</h1><br>
+        <input type="text" id="event" placeholder="Add a task....">
+        <button onclick="addItem()" id="add">Add</button>
     </div>
 
-    <ul id="list" type="none"></ul>
+    <br>
+    <h2>My Tasks:</h2>
+    <br>
+    <div id="list"></div>
 
     <script src="app.js"></script>   
 </body>

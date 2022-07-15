@@ -1,15 +1,34 @@
 function addItem(){
-    let ul = document.getElementById("list");
-    let item = document.getElementById("item");
-    let li = document.createElement("li");
-    li.setAttribute('id',item.value);
-    li.appendChild(document.createTextNode(item.value));
-    ul.appendChild(li);
-}
+    let event = document.getElementById('event');
+    let list = document.getElementById("list");
 
-function removeItem(){
-    let ul = document.getElementById("list");
-    let item = document.getElementById("item");
-    let remove = document.getElementById(item.value);
-    ul.removeChild(remove);
+    if(event.value!=""){
+        let task=document.createElement('div');
+        let p=document.createElement('p');
+        let edit=document.createElement('button');
+        let del=document.createElement('button');
+
+        p.innerText=event.value;
+        event.value="";
+        edit.innerHTML="Edit";
+        del.innerText="Delete";
+        task.id="task";
+        del.id="del";
+        task.appendChild(p);
+        task.appendChild(edit);
+        task.appendChild(del);
+        list.appendChild(task);
+
+        del.addEventListener('click',function(){
+            list.removeChild(this.parentElement);
+        });
+
+        edit.addEventListener('click',function(){
+            let x=prompt('Edit the event');
+            p.innerHTML=x;
+        });
+    }
+    else {
+        alert("Enter some text....");
+    }
 }
